@@ -35,7 +35,7 @@ function routes(Faqs) {
         if (err) {
           return res.send(err);
         }
-        return res.json(faq);
+        return res.json(req.faq);
       });
     })
     .patch((req, res) => {

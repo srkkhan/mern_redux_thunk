@@ -100,7 +100,7 @@ export default class Mylist extends Component {
 
     return (
       <div>
-        <h1>Infinite products!</h1>
+        <h3>Products</h3>
         <p>Scroll down to load more!!</p>
         {products.map(product => (
           <Fragment key={product.name}>
@@ -117,11 +117,15 @@ export default class Mylist extends Component {
                 }}
               />
               <div>
-                <h2 style={{ marginTop: 0 }}>
-                  @{product.name}
-                </h2>
-                <p>Name: {product.name}</p>
-                <p>Email: {product.name}</p>
+                <h4 style={{ marginTop: 0 }}>
+                  {product.name}
+                </h4>
+                <p>Price: {product.price.toLocaleString('en-IN', {
+    maximumFractionDigits: 2,
+    style: 'currency',
+    currency: 'INR'
+})}</p>
+                
               </div>
             </div>
           </Fragment>

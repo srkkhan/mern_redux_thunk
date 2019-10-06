@@ -9,7 +9,7 @@ class Navbar extends Component {
           <ul class="nav navbar-nav">
             <li>
             <Link 
-              to="/"
+              to="/dashboard"
               style={{
                 fontFamily: "monospace"
               }}

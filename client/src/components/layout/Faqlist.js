@@ -150,8 +150,7 @@ export default class Faqlist extends Component {
 
     return (
       <div>
-        <h1>Infinite products!</h1>
-        <p>Scroll down to load more!!</p>
+        
         {faqs.map(faq => (
           <Fragment key={faq.id} >
             <hr />
@@ -162,13 +161,13 @@ export default class Faqlist extends Component {
         ))}
         <hr />
         <form >
-          Enter New FAQ here
+          <b>Enter New FAQ here</b><br/>
         <label>
-          Question:
+          <b>Question</b>
           <textarea name="newQuestion" value={this.state.newQuestion} onChange={this.addFaq} />
         </label>
         <label>
-          Answer:
+          <b>Answer</b>
           <textarea name="newAnswer" value={this.state.newAnswer} onChange={this.addFaq} />
         </label>
         <input type="button" value="Insert" onClick={() => this.addFaqs()} />

@@ -57,14 +57,13 @@ export default class Faq extends Component {
     }else{
       return (
         <div key={this.props.faq.seqNum+1}>
-        <p>{this.props.faq.seqNum+1}</p>
-          <p>Question: {this.state.question}</p>
-          <p>Answer: {this.state.answer}</p>
+        <b>{this.props.faq.seqNum+1}. {this.state.question}</b>
+          <p>{this.state.answer}</p>
           <button value="Edit" onClick={() => this.editFaq(this.props.faq.id)} >
             {(this.state.editing)?"Save":"Edit"}
           </button>
           <button value="Delete" onClick={()=>this.props.deleteFaq(this.props.faq.id)} >
-            "Delete"
+            Delete
           </button>
         </div>
       );
