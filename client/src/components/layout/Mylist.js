@@ -25,8 +25,7 @@ export default class Mylist extends Component {
         state: {
           error,
           isLoading,
-          hasMore,
-          pagenum
+          hasMore
         },
       } = this;
 
